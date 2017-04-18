@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		
+		<script src="js/jquery-3.1.0.min.js"></script>		
+		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">		
+		<link href="css/style.css" rel="stylesheet">
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<!--
+	这几个文件的引用顺序不能动
+-->		
+		<script>
+			$(function(){
+				$("#dingyue").click(function(){
+					$("#dingyue").replaceWith("<a class='toSubmit' id='dingyue' onclick='dy_func()'>订阅中...</a>");					
+				})
+			})
+		</script>
+	
+	</head>
+	<body>
+        <!--导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		   <div class="navbar-header">  <!--logo图标及切换按钮-->
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+			  </button><!-- 自适应隐藏导航展开按钮 -->
+		      <a class="navbar-brand" href="#">
+		      	<div>
+		      	<img id="logo" src="img/youmeng2.png" alt="Worthy">
+		      	</div>
+		      </a>
+		     <!--logo图标-->
+		   </div>
+		   <div class="collapse navbar-collapse scrollspy smooth-scroll" id="nav1">
+		      <ul class="nav navbar-nav">  <!--横-->
+		         <li><a href="#">首页</a></li>
+		         <li id="product">
+		            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		            	产品 <b class="caret"></b>
+		            </a>
+		            <ul class="dropdown-menu">
+		               <li>
+		               	<p>统计分析服务</p>
+		               	<a href="#1"><h id="U-XXX">U-Game</h><br><h>选项一</h>
+		               	</a><a href="#2"><h id="U-XXX">U-ADplus</h><br><h>选项二</h>
+		               	</a><a href="#3"><h id="U-XXX">U-Oplus</h><br><h>选项三</h></a>
+		               </li>
+		               <li>
+		               	<p>行业数据解决方案</p>
+		               	<a href="#1"><h id="U-XXX">U-Game</h><br><h>选项一</h>
+		               	</a><a href="#2"><h id="U-XXX">U-ADplus</h><br><h>选项二</h>
+		               	</a><a href="#3"><h id="U-XXX">U-Oplus</h><br><h>选项三</h></a>
+		               </li>
+		               <li>
+		               	<p>自助分析工具</p>
+		               	<a href="#1"><h id="U-XXX">U-Game</h><br><h>选项一</h></a>
+		               </li>
+		               <li>
+		               	<p>运营工具</p>
+		               	<a href="#1"><h id="U-XXX">U-Game</h><br><h>选项一</h>
+		               	</a><a href="#2"><h id="U-XXX">U-ADplus</h><br><h>选项二</h>
+		               	</a><a href="#3"><h id="U-XXX">U-Oplus</h><br><h>选项三</h></a>
+		               </li>
+		               <li>
+		               	<p>全域指数&运营报告</p>
+		               	<a href="#1"><h id="U-XXX">U-Game</h><br><h>选项一</h>
+		               	</a><a href="#2"><h id="U-XXX">U-ADplus</h><br><h>选项二</h>
+		               	</a>
+		               </li>
+		               <li class="allproduct">
+		               	<div class="allpro">
+		               		<a href="#">所有产品 → </a>
+		               	</div>		               	
+		               </li>
+		               <!--		               	
+		               <li class="divider"></li>
+		               <li><a href="#">分离的链接</a></li>
+		               -->
+		            </ul>
+		         </li>
+		         <li><a href="#">指数</a></li>
+		         <li><a href="#">报告</a></li>
+		         <li id="developer">
+		            <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发者中心 <b class="caret"></b></a>
+		            <ul class="dropdown-menu">
+		               <li><a href="#">SDK与文档</a></li>
+		               <li><a href="#">服务健康状态</a></li>
+		            </ul>
+		         </li>
+		         <li><a href="#">论坛</a></li>
+		         <li><a href="#">活动</a></li>
+		      </ul>
+		      <div class="buttongroup">
+		      <button class="mybutton">注册</button>
+		      <button class="mybutton active">登录</button>
+		      </div>
+		   </div>
+
+		</nav>
+		<!--导航栏end-->
+		
+		<!--登录框-->
+		<div class="login">
+			<div class="login-title">登录</div>
+			<div class="input-group">
+				<label>
+					<b class="show-tip">?</b>
+					<div class="tip-hidden">
+						<li>
+							<span>原友盟、CNZZ站长会员通过原账号、密码登录</span>
+						</li>
+						<li>
+							<span>CNZZ全景会员通过公司名+用户名、密码登录，例如：公司名 友盟，用户名 张三，则账号为 “友盟+张三”</span>
+						</li>							
+					</div>
+					<input type="text" placeholder="友盟/CNZZ账号" />
+				</label>
+				
+				<!--<b><span class="glyphicon glyphicon-user"></span></b>-->
+			</div>
+			<div class="tip">CNZZ全景账号通过公司名+用户名登录</div>
+			<div class="input-group">
+				<label>
+				<input id="num" type="password" placeholder="密码" />
+				<!--
+				<script>
+				function testNum()
+				{
+					var x=document.getElementById("num").value;
+					if(x==""||isNaN(x))
+					{
+						alert("您所设定的密码不是数字");
+					}
+				}
+				</script>
+				-->
+				</label>
+			</div>
+			<div class="interlink">
+				<a href="#11">网站统计淘宝账号登录
+				</a><a href="#22">注册
+				</a><a href="#33">忘记密码</a>
+			</div>
+			<button class="mybutton-blue" onclick="testNum()">登录</button>
+		</div>
+		
+		<!--登录框 end-->
+		
+		<div>
+		<div class="myclass-1">其他登录请在原登录界面登录，</div>
+		<div class="interlink-2"><a href="#">产品大全</a></div>
+		</div>
+		<br><br>
+		<br><br>
+		<br><br>
+		
+		
+		<!--footer-->
+		<footer class="footer">
+			<div class="myfooter">
+				<ul class="footer-ul">
+					<li class="footer-1">
+						<h3>关于我们</h3>						
+						<a href="#" style="margin-left: -6px;">【友盟+】介绍</a><br>		
+						<a href="#">加入我们</a>
+					</li>
+					<li class="footer-2">
+						<h3>开发者</h3>
+						<a href="#" style="margin-left: -6px;">【友盟+】论坛</a><br>	
+						<a href="#">服务状态</a><br>	
+						<a href="#">客户案例</a>
+					</li>
+					<li class="footer-3">
+						<h3>联系我们</h3>
+						<a href="#weixin" class="contact-us">
+							<i class="weixin"></i>
+							<span>联系客服</span>
+						</a><br>
+						<a href="#">support@umeng.com</a><br>	
+						<a href="#">微博:@友盟全域数据</a>
+					</li>
+					<li class="footer-4">
+						<h3>微信公众号</h3>
+						<p>友盟全域数据</p>
+						<div class="saoma">
+							<div class="guanzhu">
+								<div class="saoma-guanzhu">
+									<p>关注友盟全域数据</p>
+									<img src="img/扫码关注.png" class="db" width="140" height="140">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="footer-5">
+						<h3>客户端下载</h3>
+						<p>原友盟客户端</p>
+						<div class="xiazai-1">
+							<div class="xiazai">
+								<div class="saomao-xiazai">
+									<p>原友盟客户端</p>
+									<img src="img/扫码下载1.png" class="db" width="140" height="140">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="footer-6">
+						<h3>客户端下载</h3>
+						<p>原CNZZ客户端</p>
+						<div class="xiazai-2">
+							<div class="xiazai">
+								<div class="saomao-xiazai">
+									<p>原CNZZ客户端</p>
+									<img src="img/扫码下载2.png" class="db" width="140" height="140">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="footer-7">
+						<h3>邮件订阅</h3>
+						<p>第一时间获取最新数据报告,活动信息</p>
+						<input placeholder="输入您要订阅的Email" class="input-email">						
+						<a class="toSubmit" id="dingyue" onclick="dy_func()">订阅</a>
+						<!--<script>
+						function dy_func()
+						{
+							x=document.getElementById("dingyue");  // 找到元素
+							x.innerHTML="订阅中...";    // 改变内容
+						}
+						</script>-->
+
+					</li>
+				</ul>
+				<hr>
+				<div class="copyright">
+					<p>
+						<span class="cpr1">© 2011-2016 Umeng.com , All Rights Reserved.京ICP备案11021163号-6| 京公网安备 110108008330 </span>
+					    <span class="cpr2">
+					    	<a href="#">服务条款</a> | <a href="#">隐私条款</a> | <a href="#">友情链接</a>
+					    </span>					    
+					</p>
+					<p>
+						<span class="cpr3">
+							<a href="#">返回旧版友盟</a>     <a href="#">返回旧版缔元信.网络数据</a>     <a href="#">返回旧版CNZZ</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!--footer end-->
+		
+	</body>
+</html>

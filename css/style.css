@@ -1,0 +1,694 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+body{
+	background:url(../img/background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size: cover;
+	min-height: 100%;
+	min-width: 100%;
+	color:black;
+	font-family: "微软雅黑";
+	min-height:100% ;
+	padding-top: 80px;
+	text-align: center;
+	/*position: relative;*/
+}
+
+/* Navigations
+----------------------------------------------------------------------------- */
+.header .navbar {
+    margin: 0 auto;
+    padding: 0;
+	display: inline-block;
+}
+.navbar-default {
+	background-color:#3B485B;
+	border: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-default .navbar-header{
+	padding-left: 130px;
+	padding-right: 90px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/*width:200px;*/
+	height: 80px;
+	line-height: 80px;
+	display: inline-block;
+}
+
+
+.navbar-default .navbar-header .navbar-brand {
+	/*background: transparent url(../img/youmeng2.png) center center no-repeat;*/
+	text-align:right;
+	color:snow;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 80px;
+	line-height: 80px;
+}
+
+.navbar-default .navbar-nav{
+	display: inline-block;
+}
+
+.navbar-default .navbar-nav > li {
+	display: inline-block;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #9DA4AD;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height:100%;
+	height:80px;
+	line-height: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: inline-block;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+	background-color:#455163;
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+	background-color:#455163;
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li.active > a:hover {
+	background-color:#455163;
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li:hover > ul {
+    display: block; /* 鼠标滑入母选单后，显示子选单 */
+    background-color: #455163;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-default .navbar-nav > li[id="product"]> ul {
+   position: absolute;
+   top: 100%;
+   list-style: none;
+   width:377px;  /*导航栏子目录的宽度*/
+   margin-left: 0px;
+   margin-right: 0px;
+   
+}
+
+.navbar-default .navbar-nav > li[id="developer"]> ul {
+   /*position: absolute;*/
+   text-align: center;
+   top: 100%;
+   list-style: none;
+   width:165px;  /*导航栏子目录的宽度*/
+   margin-left: 0px;
+   margin-right: 0px;
+  
+}
+
+.navbar-default .navbar-nav > li[id="product"]> ul>li{	
+	color:#9DA4AD;
+	padding-left: 15px;
+	padding-right: 0px;
+	font-size: 7px;
+}
+
+.navbar-default .navbar-nav > li> ul>li:hover {
+	color: #9DA4AD;
+}
+
+.navbar-default .navbar-nav > li> ul>.allproduct{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li> ul>.allproduct>.allpro>a{
+	height: 30px;
+	font-size: 14px;
+	color: #9DA4AD;
+}
+
+.navbar-default .navbar-nav > li> ul>.allproduct>.allpro:hover>a{
+	color: snow;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li[id="product"]:hover> ul >li:hover {
+	background-color: #3B485B;
+}
+
+.navbar-default .navbar-nav > li[id="product"]:hover> ul >li[class="allproduct"]:hover {
+	background-color: #455163;
+}
+
+
+.navbar-default .navbar-nav > li[id="product"] > ul>li>p{
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li[id="product"]> ul>li>a {
+	border:0px;
+	width:120px; 
+	height:60px;
+	display:inline-block;
+	margin-left: 0px;
+	margin-right: 0px;
+	color: #9DA4AD;
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li[id="product"] > ul>li>a[href="#1"] {
+	background: transparent url(../img/icon1.jpg);
+	background-repeat: no-repeat;
+	
+}
+.navbar-default .navbar-nav > li[id="product"] > ul>li>a[href="#2"] {
+	background: transparent url(../img/icon2.jpg);
+	background-repeat: no-repeat;
+	
+}
+.navbar-default .navbar-nav > li[id="product"] > ul>li>a[href="#3"] {
+	background: transparent url(../img/icon3.jpg);
+	background-repeat: no-repeat;
+	
+}
+
+.navbar-default .navbar-nav > li[id="product"]> ul>li>a>h {
+	padding-left: 30px;
+}
+
+.navbar-default .navbar-nav > li[id="product"]:hover>ul >li:hover >a>h[id="U-XXX"]{
+	color:snow;
+}
+
+.navbar-default .navbar-nav > li[id="developer"]:hover> ul >li >a{
+	color:#9DA4AD;
+	background-color: #455163;
+	text-align: center;
+	height:50px;
+	line-height: 50px;
+}
+
+.navbar-default .navbar-nav > li[id="developer"]:hover> ul >li:hover >a{
+	color:snow;
+	background-color: #3B485B;
+}
+
+.navbar-default .navbar-nav > li[id="product"]> ul>li>a:hover {
+	display:inline-block;
+	background-color:#3B485B;
+	/*background-color: red;*/
+}
+
+.navbar-default .navbar-nav > li[id="product"].active > ul>li.active>a {
+	background-color:#3B485B;
+    /*background-color: green;*/
+	color:#FFFFFF;
+}
+
+/* Navigations  end
+----------------------------------------------------------------------------- */
+
+/* button  
+----------------------------------------------------------------------------- */
+.buttongroup{
+	padding-left: 1000px;
+	height:80px;
+	line-height: 80px;
+}
+
+.mybutton{	
+	background-color: #3B485B;
+	border: none;
+	width:80px;
+	height:40px;
+	line-height: 40px;
+	color:#9DA4AD;
+	font-size: 16px;
+	margin: 0 5px;
+	padding: 0px;
+}
+.mybutton.active{	
+	border-width: 1px;
+	border-style:solid;
+	border-radius: 0px;
+	border-color: #9DA4AD;
+}
+
+.mybutton:hover{
+	border-color:snow;
+	color: snow;
+	border-width: 1px;
+	border-style:solid;
+	border-radius: 0px;
+	border-color: snow;
+}
+
+/* button  end
+----------------------------------------------------------------------------- */
+
+/* 登录框 
+----------------------------------------------------------------------------- */
+.login{
+	/*position: relative;*/
+	background:url(../img/login.png) center center no-repeat;
+	width:350px;
+	height:360px;
+	/*margin: 50px 400px;*/
+	padding: 30px 30px;
+	margin:50px auto;
+	display: block;
+	text-align: left;
+	color: #455163;
+	border: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	
+}
+
+.login-title{
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+
+
+.login .input-group label{
+	/*position: relative;*/
+	margin: 0;
+	padding: 0;
+}
+
+.login .input-group label input{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 0;
+	width: 290px ;
+	height: 38px;
+	font-size: 16px;
+	font-weight: normal;
+	outline:none;/*去掉点击时出现的蓝色边框*/
+}
+
+.login .input-group .show-tip {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #008bea;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 22px;
+}
+
+
+.login .input-group label b{
+	font-weight: 400;
+	font-style: normal;
+}
+
+.login .input-group .tip-hidden{
+	position: absolute;
+	display: none;
+	background-color: black;
+	opacity: 0.7;
+	width: 290px;
+	height: 120px;
+	top: 40px;
+	z-index: 10;
+	color: snow;
+	padding: 10px 10px;
+}
+
+.login .input-group label b:hover +.tip-hidden{
+	display: block;
+}
+
+.login>.tip{
+	padding-top: 3px;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+
+.interlink{
+	margin-top: 30px;
+	padding: 20px 0px;
+}
+
+.interlink>a{
+	font-size: 10px;
+	color: #008BEA;
+	margin-right: 40px;
+}
+
+.interlink>a:hover{
+	text-decoration: none;
+}
+
+.interlink>a[href="#33"]{
+	margin-right: 0px;
+}
+
+.mybutton-blue{
+	background-color: #008BEA;
+	border: none;
+	color: snow;
+	width: 290px;
+	height: 40px;
+}
+
+/* 登录框  end
+----------------------------------------------------------------------------- */
+
+.myclass-1{
+	font-size: 16px;
+	display: inline;
+}
+.interlink-2{
+	font-size: 16px;
+	display: inline;
+}
+.interlink-2>a{
+	color: #008BEA;
+}
+
+.interlink-2>a:hover{
+	text-decoration: none;
+}
+
+
+/* footer
+----------------------------------------------------------------------------- */
+/*.container{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;
+}*/
+
+
+footer{
+	position: absolute;
+	background-color: #3B485B;
+	width: 100%;
+	height: 350px;
+	color: #9DA4AD;
+	left: 0;
+	right: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.myfooter{
+	padding-top: 0px;
+	height: 200px;
+}
+
+.footer-ul li>h3{
+	font-size: 18px;
+	padding: 15px 0px;
+}
+
+.footer-ul li>p{
+	color:#9DA4AD;
+	font-size: 14px;
+}
+
+.footer-ul li>a{
+	/*height: 40px;*/
+	display:inline-block;
+	color: #9DA4AD;
+	font-size: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.footer-ul li>a:hover{
+	color: snow;
+	text-decoration: none;
+}
+
+.footer-1{
+	width: 120px;
+	display: inline-block;
+	color: snow;
+	text-align:left;
+	vertical-align: top;
+}
+
+.footer-2{
+	width: 120px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+
+.footer-3{
+	width: 180px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+.contact-us{
+	border: 1px solid;
+	border-color: #9DA4AD;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.contact-us i{
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 16px;
+	background-image: url(../img/5张图片.png);
+	/*background-position: 18px 16px;*/
+}
+
+.footer-4{
+	width: 120px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+
+.saoma,.xiazai-1,.xiazai-2{
+	position: relative;
+}
+
+.footer-4 .saoma  .guanzhu{
+	background-image: url(../img/5张图片.png);
+	display: inline-block;
+    width: 40px;
+    height: 64px;
+    background-position: -19px -66px;
+    margin-top: 15px;
+    /*position: relative;*/
+}
+
+.footer-4 .saoma  .guanzhu:hover{
+	background-position: -60px -66px;
+}
+
+.footer-4 .saoma .guanzhu .saoma-guanzhu,.footer-5 .xiazai-1 .xiazai .saomao-xiazai,
+.footer-6 .xiazai-2 .xiazai .saomao-xiazai{
+	position: absolute;
+	display: none;
+	margin: 0;
+	padding: 10px 10px;
+	top: -170px;
+	height: 180px;
+	line-height: 10px;
+	width: 170px;
+	border: 1px solid;
+	border-color: #9DA4AD;
+	color: #9DA4AD;
+	background-color: snow;
+	text-align: center;
+}
+
+.footer-4 .guanzhu:hover .saoma-guanzhu,.footer-5 .xiazai:hover .saomao-xiazai,
+.footer-6 .xiazai:hover .saomao-xiazai{
+	display: block;
+}
+
+.footer-5{
+	width: 120px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+
+.xiazai-1 .xiazai{
+	background-image: url(../img/5张图片.png);
+	display: inline-block;
+    width: 40px;
+    height: 64px;
+    background-position: -19px 0px;
+    margin-top: 15px;
+}
+
+.xiazai-1  .xiazai:hover{
+	background-position: -60px 0px;
+}
+
+.footer-6{
+	width: 120px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+
+.xiazai-2 .xiazai{
+	background-image: url(../img/5张图片.png);
+	display: inline-block;
+    width: 40px;
+    height: 64px;
+    background-position: -19px 0px;
+    margin-top: 15px;
+}
+
+.xiazai-2 .xiazai:hover{
+	background-position: -60px 0px;
+}
+
+.footer-6>h3{
+	opacity: 0;
+}
+	
+.footer-7{
+	width: 200px;
+	display: inline-block;
+	color: snow;
+	text-align: left;
+	vertical-align: top;
+}
+
+.footer-ul .footer-7>p{
+	color: #9DA4AD;
+	font-size: 10px;
+}
+
+/*.footer-ul .footer-7 input{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 0;
+	width: 290px ;
+	height: 35px;
+	font-size: 16px;
+	outline:none;
+}*/
+
+.input-email{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+	border: 1px solid;
+	border-color: snow;
+	border-radius: 20px;
+	background-color: transparent;
+	color: #9DA4AD;
+	font-size: 12px;
+	width: 205px;
+    height: 36px;
+	outline:none;/*去掉点击时出现的蓝色边框*/
+}
+
+.input-email:focus{
+	background-color: snow;
+	color: black;
+}
+
+.footer-7 .toSubmit{
+	display: inline-block;
+	width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+	border: 0px;
+	border-color: snow;
+	border-radius: 20px;
+	background-color: #57A7EA;
+	color: snow;
+	font-size: 14px;
+}
+
+.footer-7 .toSubmit:hover{
+	background-color: #4ED9CC;
+	text-decoration: none;
+	cursor: pointer;/*设定鼠标的形状为一只伸出食指的手*/
+}
+
+.footer .myfooter>hr{
+	border:0;
+	width: 80%;
+	border-top:1px solid;
+	border-color: #455163; 
+}
+
+.cpr1,.cpr2,.cpr3{
+	color: #9DA4AD;
+	font-size: 10px;
+}
+
+.cpr2{
+	margin-left: 30px;
+}
+
+.cpr3>a{
+	padding: 0 10px;
+}
+
+.cpr2>a,.cpr3>a{
+	display:inline-block;
+	color: #9DA4AD;
+	font-size: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.cpr2>a:hover,.cpr3>a:hover{
+	color: snow;
+	text-decoration: none;
+}
+
+/* footer end
+----------------------------------------------------------------------------- */
